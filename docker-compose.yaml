@@ -5,3 +5,5 @@ services:
       - POSTGRES_PASSWORD=secretpgpwd
     ports:
       - 5432:5432
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d:ro
