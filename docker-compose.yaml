@@ -7,3 +7,6 @@ services:
       - 5432:5432
     volumes:
       - ./initdb.d:/docker-entrypoint-initdb.d:ro
+      - ./ssl/server.crt:/tmp/server.crt:ro
+      - ./ssl/server.key:/tmp/server.key:ro
+      - ./ssl/root.crt:/tmp/root.crt:ro
