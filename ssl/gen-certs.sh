@@ -24,3 +24,6 @@ openssl req -new -nodes -text -out testuser.csr \
 openssl x509 -req -in testuser.csr -text -days 365 \
   -CA root.crt -CAkey root.key -CAcreateserial \
   -out testuser.crt
+
+# needed for Docker to be able to copy, chown and chmod key
+chmod 0644 server.key
