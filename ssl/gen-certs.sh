@@ -2,7 +2,7 @@
 
 set -e
 
-rm *.csr *.crt *.key *.srl
+rm -f *.csr *.crt *.key *.srl
 
 # root ca cert
 openssl req -new -nodes -text -out root.csr \
